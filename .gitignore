@@ -1,0 +1,49 @@
+# ==============================
+# Build files
+# ==============================
+build/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# ==============================
+# Large dataset
+# ==============================
+images/KITTI/
+
+# ==============================
+# Large YOLO model weights
+# ==============================
+dat/yolo/yolov3.weights
+dat/yolo/yolov3-tiny.weights
+
+# ==============================
+# Generated result frames
+# ==============================
+results/
+
+# ==============================
+# VS Code
+# ==============================
+.vscode/
+
+# ==============================
+# Backup files
+# ==============================
+*.backup
+*.bak
+*.save
+*.before_*
+
+# ==============================
+# Python cache
+# ==============================
+__pycache__/
+*.pyc
+
+# ==============================
+# OS files
+# ==============================
+.DS_Store
+Thumbs.db
