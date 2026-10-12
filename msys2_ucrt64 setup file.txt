@@ -1,0 +1,380 @@
+FOLDER STRUCTURE:
+C:\Users\SANIKA\Desktop\
+│
+├── Camera-Lidar-Sensor-Fusion\
+│   ├── CMakeLists.txt
+│   ├── src\
+│   ├── stage_code\
+│   ├── images\
+│   ├── dat\
+│   └── build\
+│
+└── tools\
+    ├── cmake\
+    └── opencv\
+
+
+RUN THIS IN MSYS UCRT64:
+check environment:
+SANIKA@Sanika-Inspiron14Plus UCRT64 ~
+$ echo $MSYSTEM
+UCRT64
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 ~
+$ which g++
+/ucrt64/bin/g++
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 ~
+$ g++ --version
+g++.exe (Rev4, Built by MSYS2 project) 16.2.0
+Copyright (C) 2026 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 ~
+$ g++ -dumpmachine
+x86_64-w64-mingw32
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 ~
+$ which cmake
+/ucrt64/bin/cmake
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 ~
+$ cmake --version
+cmake version 4.4.3
+
+CMake suite maintained and supported by Kitware (kitware.com/cmake).
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 ~
+$ which make
+/usr/bin/make
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 ~
+$ which pkg-config
+/ucrt64/bin/pkg-config
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 ~
+$ pck-config --modversion opencv4
+-bash: pck-config: command not found
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 ~
+$ pkg-config --modversion opencv4
+Package opencv4 was not found in the pkg-config search path.
+Perhaps you should add the directory containing `opencv4.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'opencv4' not found
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 ~
+$ pkg-config --modversion opencv5
+5.0.0
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 ~
+$ pkg-config --cflags --libs opencv4
+Package opencv4 was not found in the pkg-config search path.
+Perhaps you should add the directory containing `opencv4.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'opencv4' not found
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 ~
+$ pkg-config --cflags --libs opencv5
+-IC:/msys64/ucrt64/include/opencv5 -lopencv_stitching -lopencv_alphamat -lopencv_bgsegm -lopencv_ccalib -lopencv_cvv -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_gapi -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_ovis -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_ptcloud -lopencv_saliency -lopencv_sfm -lopencv_signal -lopencv_structured_light -lopencv_calib -lopencv_phase_unwrapping -lopencv_superres -lopencv_optflow -lopencv_surface_matching -lopencv_videostab -lopencv_viz -lopencv_wechat_qrcode -lopencv_objdetect -lopencv_xfeatures2d -lopencv_shape -lopencv_ximgproc -lopencv_xobjdetect -lopencv_xphoto -lopencv_photo -lopencv_xstereo -lopencv_tracking -lopencv_highgui -lopencv_datasets -lopencv_videoio -lopencv_video -lopencv_text -lopencv_imgcodecs -lopencv_features -lopencv_dnn -lopencv_stereo-lopencv_plot -lopencv_ml -lopencv_imgproc -lopencv_geometry -lopencv_flann -lopencv_core
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 ~
+$ cd "C:\Users\SANIKA\Dfesktop\ARAI\Udacity-Sensor-Fusion-Nanodegree-main\Camera\Lesson-7-Project-3D-Object-Tracking" 
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ pacman -S mingw-w64-ucrt-x86_64-python-pip
+resolving dependencies...
+looking for conflicting packages...
+
+Packages (3) mingw-w64-ucrt-x86_64-python-distlib-0.4.3-1  mingw-w64-ucrt-x86_64-python-setuptools-84.0.0-1
+             mingw-w64-ucrt-x86_64-python-pip-26.2.1-1
+
+Total Download Size:    4.17 MiB
+Total Installed Size:  25.39 MiB
+
+:: Proceed with installation? [Y/n] y
+:: Retrieving packages...
+ mingw-w64-ucrt-x86_64-python-p...     2.4 MiB   927 KiB/s 00:03 [###################################] 100%
+ mingw-w64-ucrt-x86_64-python-d...   423.2 KiB   120 KiB/s 00:04 [###################################] 100%
+ mingw-w64-ucrt-x86_64-python-s...  1342.2 KiB   337 KiB/s 00:04 [###################################] 100%
+ Total (3/3)                           4.2 MiB   815 KiB/s 00:05 [###################################] 100%
+(3/3) checking keys in keyring                                   [###################################] 100%
+(3/3) checking package integrity                                 [###################################] 100%
+(3/3) loading package files                                      [###################################] 100%
+(3/3) checking for file conflicts                                [###################################] 100%
+(3/3) checking available disk space                              [###################################] 100%
+:: Processing package changes...
+(1/3) installing mingw-w64-ucrt-x86_64-python-setuptools         [###################################] 100%
+(2/3) installing mingw-w64-ucrt-x86_64-python-distlib            [###################################] 100%
+(3/3) installing mingw-w64-ucrt-x86_64-python-pip                [###################################] 100%
+
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ pacman -S mingw-w64-ucrt-x86_64-python-pillow
+resolving dependencies...
+looking for conflicting packages...
+
+Packages (3) mingw-w64-ucrt-x86_64-libimagequant-4.4.1-1  mingw-w64-ucrt-x86_64-libraqm-0.11.0-1
+             mingw-w64-ucrt-x86_64-python-pillow-12.3.0-1
+
+Total Download Size:    2.90 MiB
+Total Installed Size:  12.93 MiB
+
+:: Proceed with installation? [Y/n] y
+:: Retrieving packages...
+ mingw-w64-ucrt-x86_64-libraqm-...    44.9 KiB  14.2 KiB/s 00:03 [###################################] 100%
+ mingw-w64-ucrt-x86_64-libimage...  1967.8 KiB   577 KiB/s 00:03 [###################################] 100%
+ mingw-w64-ucrt-x86_64-python-p...   957.9 KiB   252 KiB/s 00:04 [###################################] 100%
+ Total (3/3)                           2.9 MiB   662 KiB/s 00:04 [###################################] 100%
+(3/3) checking keys in keyring                                   [###################################] 100%
+(3/3) checking package integrity                                 [###################################] 100%
+(3/3) loading package files                                      [###################################] 100%
+(3/3) checking for file conflicts                                [###################################] 100%
+(3/3) checking available disk space                              [###################################] 100%
+:: Processing package changes...
+(1/3) installing mingw-w64-ucrt-x86_64-libimagequant             [###################################] 100%
+(2/3) installing mingw-w64-ucrt-x86_64-libraqm                   [###################################] 100%
+(3/3) installing mingw-w64-ucrt-x86_64-python-pillow             [###################################] 100%
+Optional dependencies for mingw-w64-ucrt-x86_64-python-pillow
+    mingw-w64-ucrt-x86_64-tk: for the ImageTK module [installed]
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ python -c "from PIL import Image; print('Pillow installed successfully')"
+Pillow installed successfully
+
+verify the dataset:
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ test -f "./images/KITTI/2011_09_26/image_02/data/0000000000.png" && echo "Image exists" || echo "Image NOT found"
+Image exists
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ test -f "./images/KITTI/2011_09_26/velodyne_points/data/0000000000.bin" && echo "LiDAR file exists" || echo "LiDAR file NOT found"
+LiDAR file exists
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ find "./images/KITTI/2011_09_26" -maxdepth 1 -type f -name "calib*.txt"
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ find "./images/KITTI/2011_09_26/image_02/data" -maxdepth 1 -type f -name "*.png" | wc -l
+78
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ find "./images/KITTI/2011_09_26/velodyne_points/data" -maxdepth 1 -type f -name "*.bin" | wc -l
+78
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ pwd
+/c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ ls
+CMakeLists.txt                              dat
+ENVIRONMENT.md                              images
+OFFICE_SETUP_GUIDE.md                       results
+OpenPCDet_Office_WSL_VSCode_Setup_Guide.md  results_preview
+README.md                                   src
+Windows_CPP_Camera_LiDAR_Setup_Guide.docx   stage_code
+build                                       tools
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ ls build
+3D_object_tracking  Stage02_LiDAR
+CMakeCache.txt      Stage03_LiDARProjection
+CMakeFiles          Stage04_SensorFusion
+Makefile            Stage05_TargetVehicle
+Stage00_RawCamera   cmake_install.cmake
+Stage01_YOLO
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ find build -maxdepth 2 -type f \( -name "Makefile" -o -name "build.ninja" -o -name "CMakeCache.txt" -o -name "*.exe" \)
+build/CMakeCache.txt
+build/Makefile
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ find . -type f -iname "*calib*"
+./images/KITTI/2011_09_26/calib_cam_to_cam.txt
+./images/KITTI/2011_09_26/calib_imu_to_velo.txt
+./images/KITTI/2011_09_26/calib_velo_to_cam.txt
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ ls -la "./images/KITTI/2011_09_26"
+total 6
+drwxr-xr-x 1 SANIKA None    0 Oct 12 20:55 .
+drwxr-xr-x 1 SANIKA None    0 Oct  1 09:46 ..
+-rw-r--r-- 1 SANIKA None 3001 Oct 12 09:06 calib_cam_to_cam.txt
+-rw-r--r-- 1 SANIKA None  200 Oct 12 09:06 calib_imu_to_velo.txt
+-rw-r--r-- 1 SANIKA None  271 Oct 12 09:06 calib_velo_to_cam.txt
+drwxr-xr-x 1 SANIKA None    0 Oct  1 09:46 image_02
+drwxr-xr-x 1 SANIKA None    0 Oct  1 09:46 velodyne_points
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ ls "./images/KITTI/2011_09_26"
+calib_cam_to_cam.txt   image_02
+calib_imu_to_velo.txt  velodyne_points
+calib_velo_to_cam.txt
+
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ mkdir build
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ cd build
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking/build
+$ ls -la
+total 4
+drwxr-xr-x 1 SANIKA None 0 Oct 12 21:10 .
+drwxr-xr-x 1 SANIKA None 0 Oct 12 21:10 ..
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking/build
+$ cd ..
+
+configure cmake:
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ cmake -S . -B build -G "MinGW Makefiles" -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+CMake Warning (deprecated) at CMakeLists.txt:2 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+-- The C compiler identification is GNU 16.2.0
+-- The CXX compiler identification is GNU 16.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/msys64/ucrt64/bin/cc.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/msys64/ucrt64/bin/c++.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found OpenCV: C:/msys64/ucrt64 (found version "5.0.0")
+-- Configuring done (9.3s)
+-- Generating done (0.4s)
+-- Build files have been written to: C:/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking/build
+
+
+Build stages:
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking/build
+$ cd ..
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ cmake --build build --target Stage00_RawCamera --parallel 2
+[ 50%] Building CXX object CMakeFiles/Stage00_RawCamera.dir/stage_code/00_raw_camera/Stage00_RawCamera.cpp.obj
+[100%] Linking CXX executable Stage00_RawCamera.exe
+[100%] Built target Stage00_RawCamera
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ cd build
+
+run executable:
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking/build
+$ ./Stage00_RawCamera.exe
+
+==============================================
+ STAGE 0: RAW CAMERA IMAGES
+==============================================
+Frames: 0 - 77
+No detection or processing.
+Saving raw camera frames.
+Frame  0 | Saved
+Frame  1 | Saved
+Frame  2 | Saved
+Frame  3 | Saved
+Frame  4 | Saved
+Frame  5 | Saved
+Frame  6 | Saved
+Frame  7 | Saved
+Frame  8 | Saved
+Frame  9 | Saved
+Frame 10 | Saved
+Frame 11 | Saved
+Frame 12 | Saved
+Frame 13 | Saved
+Frame 14 | Saved
+Frame 15 | Saved
+Frame 16 | Saved
+Frame 17 | Saved
+Frame 18 | Saved
+Frame 19 | Saved
+Frame 20 | Saved
+Frame 21 | Saved
+Frame 22 | Saved
+Frame 23 | Saved
+Frame 24 | Saved
+Frame 25 | Saved
+Frame 26 | Saved
+Frame 27 | Saved
+Frame 28 | Saved
+Frame 29 | Saved
+Frame 30 | Saved
+Frame 31 | Saved
+Frame 32 | Saved
+Frame 33 | Saved
+Frame 34 | Saved
+Frame 35 | Saved
+Frame 36 | Saved
+Frame 37 | Saved
+Frame 38 | Saved
+Frame 39 | Saved
+Frame 40 | Saved
+Frame 41 | Saved
+Frame 42 | Saved
+Frame 43 | Saved
+Frame 44 | Saved
+Frame 45 | Saved
+Frame 46 | Saved
+Frame 47 | Saved
+Frame 48 | Saved
+Frame 49 | Saved
+Frame 50 | Saved
+Frame 51 | Saved
+Frame 52 | Saved
+Frame 53 | Saved
+Frame 54 | Saved
+Frame 55 | Saved
+Frame 56 | Saved
+Frame 57 | Saved
+Frame 58 | Saved
+Frame 59 | Saved
+Frame 60 | Saved
+Frame 61 | Saved
+Frame 62 | Saved
+Frame 63 | Saved
+Frame 64 | Saved
+Frame 65 | Saved
+Frame 66 | Saved
+Frame 67 | Saved
+Frame 68 | Saved
+Frame 69 | Saved
+Frame 70 | Saved
+Frame 71 | Saved
+Frame 72 | Saved
+Frame 73 | Saved
+Frame 74 | Saved
+Frame 75 | Saved
+Frame 76 | Saved
+Frame 77 | Saved
+
+==============================================
+ STAGE 0 COMPLETE
+==============================================
+
+generate gif:
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ python tools/make_gif.py results/stages/00_raw_camera/frames results/stages/00_raw_camera/stage00_raw_camera.gif 10
+Created GIF: results/stages/00_raw_camera/stage00_raw_camera.gif
+Frames: 78
+FPS: 10
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ ls -lh results/stages/00_raw_camera/stage00_raw_camera.gif
+-rw-r--r-- 1 SANIKA None 24M Oct 12 21:40 results/stages/00_raw_camera/stage00_raw_camera.gif
