@@ -762,6 +762,29 @@ $ ls -lh results/stages/00_raw_camera/stage00_raw_camera.gif
 -rw-r--r-- 1 SANIKA None 24M Oct 12 21:40 results/stages/00_raw_camera/stage00_raw_camera.gif
 ______________________________________________________________________________________________________________________________________________________________________________________
 
+Troubleshooting: Stage 1 Qt/DLL Runtime Error
+
+Symptom: "Stage01_YOLO.exe" exits immediately with error code "-1073741515" ("0xC0000135").
+
+Cause: A required runtime DLL is missing or cannot be found. In our setup, the issue was resolved by installing the Qt 6 runtime through MSYS2 UCRT64.
+
+Solution:
+
+1. Open the MSYS2 UCRT64 terminal.
+
+2. Install the Qt 6 base package:
+   
+   pacman -S mingw-w64-ucrt-x86_64-qt6-base
+
+3. Allow the package installation to finish successfully.
+
+4. Run the Stage 1 executable again from the project root:
+   
+   ./build/Stage01_YOLO.exe
+
+5. If the executable still fails, check the missing DLL reported by Windows and verify that the MSYS2 UCRT64 runtime libraries are accessible. Installing Qt alone may not resolve every missing-DLL issue.
+
+Important: This fix was verified on the development laptop. Other Windows computers may need the corresponding runtime dependencies installed or made available on their DLL search path.
 
 SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
 $ python --version
