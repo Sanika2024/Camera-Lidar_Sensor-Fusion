@@ -305,7 +305,7 @@ int main()
     // ============================================================
 
     string dataPath =
-        "../";
+        "";
 
 
     // ============================================================
@@ -332,7 +332,7 @@ int main()
     // ============================================================
 
     string outputPath =
-        "../results/stages/05_target_vehicle/frames/";
+        "results/stages/05_target_vehicle/frames/";
 
 
     // ============================================================
@@ -346,18 +346,16 @@ int main()
         yoloBasePath + "coco.names";
 
     string yoloModelConfiguration =
-        yoloBasePath + "yolov3.cfg";
+        yoloBasePath + "yolov3.onnx";
 
-    string yoloModelWeights =
-        yoloBasePath + "yolov3.weights";
-
+    string yoloModelWeights = "";
 
     // ============================================================
     // FRAME SETTINGS
     // ============================================================
 
     int imgStartIndex = 0;
-    int imgEndIndex = 18;
+    int imgEndIndex = 77;
     int imgStepWidth = 1;
     int imgFillWidth = 4;
 

@@ -31,7 +31,7 @@ int main()
     string imgFileType = ".png";
 
     int imgStartIndex = 0;
-    int imgEndIndex = 18;
+    int imgEndIndex = 77;
     int imgFillWidth = 4;
 
     // YOLO files
@@ -39,9 +39,8 @@ int main()
     string yoloClassesFile =
         yoloBasePath + "coco.names";
     string yoloModelConfiguration =
-        yoloBasePath + "yolov3.cfg";
-    string yoloModelWeights =
-        yoloBasePath + "yolov3.weights";
+        yoloBasePath + "yolov3.onnx";
+    string yoloModelWeights = "";
 
     // Output folder
     string outputPath =
@@ -168,7 +167,7 @@ int main()
             string label =
                 className +
                 "  Conf: " +
-                to_string(box.confidence).substr(0, 4);
+                cv::format("%.2f", box.confidence);
 
             // Text size
             int baseline = 0;

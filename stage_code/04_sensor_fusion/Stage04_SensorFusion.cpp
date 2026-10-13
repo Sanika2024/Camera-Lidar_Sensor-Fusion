@@ -153,7 +153,7 @@ int main()
     // ============================================================
 
     // Program is executed from build/
-    string dataPath = "../";
+    string dataPath = "";
 
     // ------------------------------------------------------------
     // Camera
@@ -177,7 +177,7 @@ int main()
     // ------------------------------------------------------------
 
     string outputPath =
-        "../results/stages/04_sensor_fusion/frames/";
+        "results/stages/04_sensor_fusion/frames/";
 
     // ------------------------------------------------------------
     // YOLO
@@ -190,10 +190,9 @@ int main()
         yoloBasePath + "coco.names";
 
     string yoloModelConfiguration =
-        yoloBasePath + "yolov3.cfg";
+        yoloBasePath + "yolov3.onnx";
 
-    string yoloModelWeights =
-        yoloBasePath + "yolov3.weights";
+    string yoloModelWeights = "";
 
 
     // ============================================================
@@ -201,7 +200,7 @@ int main()
     // ============================================================
 
     int imgStartIndex = 0;
-    int imgEndIndex = 18;
+    int imgEndIndex = 77;
     int imgStepWidth = 1;
     int imgFillWidth = 4;
 

@@ -29,7 +29,7 @@ int main()
         "../results/stages/00_raw_camera/frames/";
 
     int imgStartIndex = 0;
-    int imgEndIndex = 18;
+    int imgEndIndex = 77;
     int imgStepWidth = 1;
     int imgFillWidth = 4;
 

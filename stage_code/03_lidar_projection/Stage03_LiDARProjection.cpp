@@ -23,7 +23,7 @@ int main()
     // ============================================================
 
     // Program is executed from build/
-    string dataPath = "../";
+    string dataPath = "";
 
     string imgBasePath = dataPath + "images/";
 
@@ -34,10 +34,10 @@ int main()
         "KITTI/2011_09_26/velodyne_points/data/000000";
 
     string outputPath =
-        "../results/stages/03_lidar_projection/frames/";
+        "results/stages/03_lidar_projection/frames/";
 
     int imgStartIndex = 0;
-    int imgEndIndex = 18;
+    int imgEndIndex = 77;
     int imgStepWidth = 1;
     int imgFillWidth = 4;
 

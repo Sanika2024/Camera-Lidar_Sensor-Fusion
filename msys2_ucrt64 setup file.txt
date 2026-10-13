@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 FOLDER STRUCTURE:
 C:\Users\SANIKA\Desktop\
 │
@@ -378,3 +379,1004 @@ FPS: 10
 SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
 $ ls -lh results/stages/00_raw_camera/stage00_raw_camera.gif
 -rw-r--r-- 1 SANIKA None 24M Oct 12 21:40 results/stages/00_raw_camera/stage00_raw_camera.gif
+=======
+FOLDER STRUCTURE:
+C:\Users\SANIKA\Desktop\
+│
+├── Camera-Lidar-Sensor-Fusion\
+│   ├── CMakeLists.txt
+│   ├── src\
+│   ├── stage_code\
+│   ├── images\
+│   ├── dat\
+│   └── build\
+│
+└── tools\
+    ├── cmake\
+    └── opencv\
+
+
+RUN THIS IN MSYS UCRT64:
+check environment:
+SANIKA@Sanika-Inspiron14Plus UCRT64 ~
+$ echo $MSYSTEM
+UCRT64
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 ~
+$ which g++
+/ucrt64/bin/g++
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 ~
+$ g++ --version
+g++.exe (Rev4, Built by MSYS2 project) 16.2.0
+Copyright (C) 2026 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 ~
+$ g++ -dumpmachine
+x86_64-w64-mingw32
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 ~
+$ which cmake
+/ucrt64/bin/cmake
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 ~
+$ cmake --version
+cmake version 4.4.3
+
+CMake suite maintained and supported by Kitware (kitware.com/cmake).
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 ~
+$ which make
+/usr/bin/make
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 ~
+$ which pkg-config
+/ucrt64/bin/pkg-config
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 ~
+$ pck-config --modversion opencv4
+-bash: pck-config: command not found
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 ~
+$ pkg-config --modversion opencv4
+Package opencv4 was not found in the pkg-config search path.
+Perhaps you should add the directory containing `opencv4.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'opencv4' not found
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 ~
+$ pkg-config --modversion opencv5
+5.0.0
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 ~
+$ pkg-config --cflags --libs opencv4
+Package opencv4 was not found in the pkg-config search path.
+Perhaps you should add the directory containing `opencv4.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'opencv4' not found
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 ~
+$ pkg-config --cflags --libs opencv5
+-IC:/msys64/ucrt64/include/opencv5 -lopencv_stitching -lopencv_alphamat -lopencv_bgsegm -lopencv_ccalib -lopencv_cvv -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_gapi -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_ovis -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_ptcloud -lopencv_saliency -lopencv_sfm -lopencv_signal -lopencv_structured_light -lopencv_calib -lopencv_phase_unwrapping -lopencv_superres -lopencv_optflow -lopencv_surface_matching -lopencv_videostab -lopencv_viz -lopencv_wechat_qrcode -lopencv_objdetect -lopencv_xfeatures2d -lopencv_shape -lopencv_ximgproc -lopencv_xobjdetect -lopencv_xphoto -lopencv_photo -lopencv_xstereo -lopencv_tracking -lopencv_highgui -lopencv_datasets -lopencv_videoio -lopencv_video -lopencv_text -lopencv_imgcodecs -lopencv_features -lopencv_dnn -lopencv_stereo-lopencv_plot -lopencv_ml -lopencv_imgproc -lopencv_geometry -lopencv_flann -lopencv_core
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 ~
+$ cd "C:\Users\SANIKA\Dfesktop\ARAI\Udacity-Sensor-Fusion-Nanodegree-main\Camera\Lesson-7-Project-3D-Object-Tracking" 
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ pacman -S mingw-w64-ucrt-x86_64-python-pip
+resolving dependencies...
+looking for conflicting packages...
+
+Packages (3) mingw-w64-ucrt-x86_64-python-distlib-0.4.3-1  mingw-w64-ucrt-x86_64-python-setuptools-84.0.0-1
+             mingw-w64-ucrt-x86_64-python-pip-26.2.1-1
+
+Total Download Size:    4.17 MiB
+Total Installed Size:  25.39 MiB
+
+:: Proceed with installation? [Y/n] y
+:: Retrieving packages...
+ mingw-w64-ucrt-x86_64-python-p...     2.4 MiB   927 KiB/s 00:03 [###################################] 100%
+ mingw-w64-ucrt-x86_64-python-d...   423.2 KiB   120 KiB/s 00:04 [###################################] 100%
+ mingw-w64-ucrt-x86_64-python-s...  1342.2 KiB   337 KiB/s 00:04 [###################################] 100%
+ Total (3/3)                           4.2 MiB   815 KiB/s 00:05 [###################################] 100%
+(3/3) checking keys in keyring                                   [###################################] 100%
+(3/3) checking package integrity                                 [###################################] 100%
+(3/3) loading package files                                      [###################################] 100%
+(3/3) checking for file conflicts                                [###################################] 100%
+(3/3) checking available disk space                              [###################################] 100%
+:: Processing package changes...
+(1/3) installing mingw-w64-ucrt-x86_64-python-setuptools         [###################################] 100%
+(2/3) installing mingw-w64-ucrt-x86_64-python-distlib            [###################################] 100%
+(3/3) installing mingw-w64-ucrt-x86_64-python-pip                [###################################] 100%
+
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ pacman -S mingw-w64-ucrt-x86_64-python-pillow
+resolving dependencies...
+looking for conflicting packages...
+
+Packages (3) mingw-w64-ucrt-x86_64-libimagequant-4.4.1-1  mingw-w64-ucrt-x86_64-libraqm-0.11.0-1
+             mingw-w64-ucrt-x86_64-python-pillow-12.3.0-1
+
+Total Download Size:    2.90 MiB
+Total Installed Size:  12.93 MiB
+
+:: Proceed with installation? [Y/n] y
+:: Retrieving packages...
+ mingw-w64-ucrt-x86_64-libraqm-...    44.9 KiB  14.2 KiB/s 00:03 [###################################] 100%
+ mingw-w64-ucrt-x86_64-libimage...  1967.8 KiB   577 KiB/s 00:03 [###################################] 100%
+ mingw-w64-ucrt-x86_64-python-p...   957.9 KiB   252 KiB/s 00:04 [###################################] 100%
+ Total (3/3)                           2.9 MiB   662 KiB/s 00:04 [###################################] 100%
+(3/3) checking keys in keyring                                   [###################################] 100%
+(3/3) checking package integrity                                 [###################################] 100%
+(3/3) loading package files                                      [###################################] 100%
+(3/3) checking for file conflicts                                [###################################] 100%
+(3/3) checking available disk space                              [###################################] 100%
+:: Processing package changes...
+(1/3) installing mingw-w64-ucrt-x86_64-libimagequant             [###################################] 100%
+(2/3) installing mingw-w64-ucrt-x86_64-libraqm                   [###################################] 100%
+(3/3) installing mingw-w64-ucrt-x86_64-python-pillow             [###################################] 100%
+Optional dependencies for mingw-w64-ucrt-x86_64-python-pillow
+    mingw-w64-ucrt-x86_64-tk: for the ImageTK module [installed]
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ python -c "from PIL import Image; print('Pillow installed successfully')"
+Pillow installed successfully
+
+verify the dataset:
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ test -f "./images/KITTI/2011_09_26/image_02/data/0000000000.png" && echo "Image exists" || echo "Image NOT found"
+Image exists
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ test -f "./images/KITTI/2011_09_26/velodyne_points/data/0000000000.bin" && echo "LiDAR file exists" || echo "LiDAR file NOT found"
+LiDAR file exists
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ find "./images/KITTI/2011_09_26" -maxdepth 1 -type f -name "calib*.txt"
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ find "./images/KITTI/2011_09_26/image_02/data" -maxdepth 1 -type f -name "*.png" | wc -l
+78
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ find "./images/KITTI/2011_09_26/velodyne_points/data" -maxdepth 1 -type f -name "*.bin" | wc -l
+78
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ pwd
+/c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ ls
+CMakeLists.txt                              dat
+ENVIRONMENT.md                              images
+OFFICE_SETUP_GUIDE.md                       results
+OpenPCDet_Office_WSL_VSCode_Setup_Guide.md  results_preview
+README.md                                   src
+Windows_CPP_Camera_LiDAR_Setup_Guide.docx   stage_code
+build                                       tools
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ ls build
+3D_object_tracking  Stage02_LiDAR
+CMakeCache.txt      Stage03_LiDARProjection
+CMakeFiles          Stage04_SensorFusion
+Makefile            Stage05_TargetVehicle
+Stage00_RawCamera   cmake_install.cmake
+Stage01_YOLO
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ find build -maxdepth 2 -type f \( -name "Makefile" -o -name "build.ninja" -o -name "CMakeCache.txt" -o -name "*.exe" \)
+build/CMakeCache.txt
+build/Makefile
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ find . -type f -iname "*calib*"
+./images/KITTI/2011_09_26/calib_cam_to_cam.txt
+./images/KITTI/2011_09_26/calib_imu_to_velo.txt
+./images/KITTI/2011_09_26/calib_velo_to_cam.txt
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ ls -la "./images/KITTI/2011_09_26"
+total 6
+drwxr-xr-x 1 SANIKA None    0 Oct 12 20:55 .
+drwxr-xr-x 1 SANIKA None    0 Oct  1 09:46 ..
+-rw-r--r-- 1 SANIKA None 3001 Oct 12 09:06 calib_cam_to_cam.txt
+-rw-r--r-- 1 SANIKA None  200 Oct 12 09:06 calib_imu_to_velo.txt
+-rw-r--r-- 1 SANIKA None  271 Oct 12 09:06 calib_velo_to_cam.txt
+drwxr-xr-x 1 SANIKA None    0 Oct  1 09:46 image_02
+drwxr-xr-x 1 SANIKA None    0 Oct  1 09:46 velodyne_points
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ ls "./images/KITTI/2011_09_26"
+calib_cam_to_cam.txt   image_02
+calib_imu_to_velo.txt  velodyne_points
+calib_velo_to_cam.txt
+
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ mkdir build
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ cd build
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking/build
+$ ls -la
+total 4
+drwxr-xr-x 1 SANIKA None 0 Oct 12 21:10 .
+drwxr-xr-x 1 SANIKA None 0 Oct 12 21:10 ..
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking/build
+$ cd ..
+
+configure cmake:
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ cmake -S . -B build -G "MinGW Makefiles" -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+CMake Warning (deprecated) at CMakeLists.txt:2 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+-- The C compiler identification is GNU 16.2.0
+-- The CXX compiler identification is GNU 16.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/msys64/ucrt64/bin/cc.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/msys64/ucrt64/bin/c++.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found OpenCV: C:/msys64/ucrt64 (found version "5.0.0")
+-- Configuring done (9.3s)
+-- Generating done (0.4s)
+-- Build files have been written to: C:/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking/build
+
+
+Build stages:
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking/build
+$ cd ..
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ cmake --build build --target Stage00_RawCamera --parallel 2
+[ 50%] Building CXX object CMakeFiles/Stage00_RawCamera.dir/stage_code/00_raw_camera/Stage00_RawCamera.cpp.obj
+[100%] Linking CXX executable Stage00_RawCamera.exe
+[100%] Built target Stage00_RawCamera
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ cd build
+
+run executable:
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking/build
+$ ./Stage00_RawCamera.exe
+
+==============================================
+ STAGE 0: RAW CAMERA IMAGES
+==============================================
+Frames: 0 - 77
+No detection or processing.
+Saving raw camera frames.
+Frame  0 | Saved
+Frame  1 | Saved
+Frame  2 | Saved
+Frame  3 | Saved
+Frame  4 | Saved
+Frame  5 | Saved
+Frame  6 | Saved
+Frame  7 | Saved
+Frame  8 | Saved
+Frame  9 | Saved
+Frame 10 | Saved
+Frame 11 | Saved
+Frame 12 | Saved
+Frame 13 | Saved
+Frame 14 | Saved
+Frame 15 | Saved
+Frame 16 | Saved
+Frame 17 | Saved
+Frame 18 | Saved
+Frame 19 | Saved
+Frame 20 | Saved
+Frame 21 | Saved
+Frame 22 | Saved
+Frame 23 | Saved
+Frame 24 | Saved
+Frame 25 | Saved
+Frame 26 | Saved
+Frame 27 | Saved
+Frame 28 | Saved
+Frame 29 | Saved
+Frame 30 | Saved
+Frame 31 | Saved
+Frame 32 | Saved
+Frame 33 | Saved
+Frame 34 | Saved
+Frame 35 | Saved
+Frame 36 | Saved
+Frame 37 | Saved
+Frame 38 | Saved
+Frame 39 | Saved
+Frame 40 | Saved
+Frame 41 | Saved
+Frame 42 | Saved
+Frame 43 | Saved
+Frame 44 | Saved
+Frame 45 | Saved
+Frame 46 | Saved
+Frame 47 | Saved
+Frame 48 | Saved
+Frame 49 | Saved
+Frame 50 | Saved
+Frame 51 | Saved
+Frame 52 | Saved
+Frame 53 | Saved
+Frame 54 | Saved
+Frame 55 | Saved
+Frame 56 | Saved
+Frame 57 | Saved
+Frame 58 | Saved
+Frame 59 | Saved
+Frame 60 | Saved
+Frame 61 | Saved
+Frame 62 | Saved
+Frame 63 | Saved
+Frame 64 | Saved
+Frame 65 | Saved
+Frame 66 | Saved
+Frame 67 | Saved
+Frame 68 | Saved
+Frame 69 | Saved
+Frame 70 | Saved
+Frame 71 | Saved
+Frame 72 | Saved
+Frame 73 | Saved
+Frame 74 | Saved
+Frame 75 | Saved
+Frame 76 | Saved
+Frame 77 | Saved
+
+==============================================
+ STAGE 0 COMPLETE
+==============================================
+
+generate gif:
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ python tools/make_gif.py results/stages/00_raw_camera/frames results/stages/00_raw_camera/stage00_raw_camera.gif 10
+Created GIF: results/stages/00_raw_camera/stage00_raw_camera.gif
+Frames: 78
+FPS: 10
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ ls -lh results/stages/00_raw_camera/stage00_raw_camera.gif
+-rw-r--r-- 1 SANIKA None 24M Oct 12 21:40 results/stages/00_raw_camera/stage00_raw_camera.gif
+______________________________________________________________________________________________________________________________________________________________________________________
+
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ python --version
+Python 3.14.7
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ python -m pip --version
+pip 26.2.1 from C:/msys64/ucrt64/lib/python3.14/site-packages/pip (python 3.14)
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ py -0p
+ -V:3.14 *        C:\Python314\python.exe
+ -V:3.13          C:\Users\SANIKA\AppData\Local\Programs\Python\Python313\python.exe
+ -V:3.9           D:\Python-3.9.5-Class\python.exe
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ /c/Users/SANIKA/AppData/Local/Programs/Python/Python313/python.exe -m venv .venv-yolo
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ source .venv-yolo/Scripts/activate
+(.venv-yolo)
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ python --version
+Python 3.13.2
+(.venv-yolo)
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ python -m pip --version
+pip 24.3.1 from C:\Users\SANIKA\Desktop\ARAI\Udacity-Sensor-Fusion-Nanodegree-main\Camera\Lesson-7-Project-3D-Object-Tracking\.venv-yolo\Lib\site-packages\pip (python 3.13)
+(.venv-yolo)
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ python -m pip index versions onnx
+WARNING: pip index is currently an experimental command. It may be removed/changed in a future release without prior warning.
+onnx (1.23.2)
+Available versions: 1.23.2, 1.23.1, 1.23.0, 1.22.0, 1.21.0, 1.20.1, 1.20.0, 1.19.1, 1.19.0, 1.18.0, 1.17.0, 1.16.2, 1.16.1, 1.16.0, 1.15.0, 1.14.1, 1.14.0, 1.13.1, 1.13.0, 1.12.0, 1.11.0, 1.10.2, 1.10.1, 1.10.0, 1.9.0, 1.8.1, 1.8.0, 1.7.0, 1.6.0, 1.5.0, 1.4.1, 1.4.0, 1.3.0, 1.2.3, 1.2.2, 1.2.1, 1.1.2, 1.1.1, 1.1.0, 1.0.1, 1.0.0, 0.2.1, 0.2, 0.1
+
+[notice] A new release of pip is available: 24.3.1 -> 26.2.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+(.venv-yolo)
+
+python -m pip install --upgrade pip
+python -m pip install onnx onnxscript tf2onnx
+python -c "import onnx; print('ONNX version:', onnx.__version__)"  --> ONNX version: 1.23.2
+python -m pip show onnxscript tf2onnx
+
+python -m pip install "darknet2any[cpu]"
+
+darknet2onnx -h
+
+(.venv-yolo)
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ python -m pip show darknet2any
+WARNING: Package(s) not found: darknet2any
+(.venv-yolo)
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ python -m pip show torch
+Name: torch
+Version: 2.14.1
+Summary: Tensors and Dynamic neural networks in Python with strong GPU acceleration
+Home-page: https://pytorch.org
+Author:
+Author-email: PyTorch Team <packages@pytorch.org>
+License-Expression: Apache-2.0 AND Apache-2.0 WITH LLVM-exception AND BSD-2-Clause AND BSD-3-Clause AND BSL-1.0 AND MIT
+Location: C:\Users\SANIKA\Desktop\ARAI\Udacity-Sensor-Fusion-Nanodegree-main\Camera\Lesson-7-Project-3D-Object-Tracking\.venv-yolo\Lib\site-packages
+Requires: filelock, fsspec, jinja2, networkx, setuptools, sympy, typing-extensions
+Required-by:
+(.venv-yolo)
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ python -c "import onnx; print(onnx.__version__)"
+1.23.2
+(.venv-yolo)
+
+
+deactivate
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ mkdir -p /c/yolo
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ /c/Users/SANIKA/AppData/Local/Programs/Python/Python313/python.exe -m venv /c/yolo/venv
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ source /c/yolo/venv/Scripts/activate
+(venv)
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ python --version
+Python 3.13.2
+(venv)
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ python -m pip --version
+pip 24.3.1 from C:\yolo\venv\Lib\site-packages\pip (python 3.13)
+(venv)
+
+DOWNLOAD : https://github.com/LdDl/darknet2onnx/releases/latest/download/windows-amd64-darknet2onnx.zip
+Extract in C/yolo
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ ls -lh /c/yolo/
+total 3.9M
+-rwxr-xr-x 1 SANIKA None 3.9M Oct 13 21:07 darknet2onnx.exe
+drwxr-xr-x 1 SANIKA None    0 Oct 13 21:03 venv
+(venv)
+
+(venv)
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ /c/yolo/darknet2onnx.exe --help
+darknet2onnx - Convert Darknet .cfg+.weights to ONNX
+
+Usage:
+  darknet2onnx --cfg model.cfg --weights model.weights [--output model.onnx] [--opset 12] [--format yolov5]
+
+Flags:
+  -cfg string
+        Path to Darknet .cfg file (required)
+  -format string
+        Output format: yolov5 [1,N,5+C] or yolov8 [1,4+C,N] (default "yolov5")
+  -opset int
+        ONNX opset version (default 12)
+  -output string
+        Output ONNX file path (default "model.onnx")
+  -weights string
+        Path to Darknet .weights file (required)
+(venv)
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ /c/yolo/darknet2onnx.exe -h
+darknet2onnx - Convert Darknet .cfg+.weights to ONNX
+
+Usage:
+  darknet2onnx --cfg model.cfg --weights model.weights [--output model.onnx] [--opset 12] [--format yolov5]
+
+Flags:
+  -cfg string
+        Path to Darknet .cfg file (required)
+  -format string
+        Output format: yolov5 [1,N,5+C] or yolov8 [1,4+C,N] (default "yolov5")
+  -opset int
+        ONNX opset version (default 12)
+  -output string
+        Output ONNX file path (default "model.onnx")
+  -weights string
+        Path to Darknet .weights file (required)
+(venv)
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ /c/yolo/darknet2onnx.exe --cfg "$PWD/dat/yolo/yolov3.cfg" --weights "$PWD/dat/yolo/yolov3.weights" --output "$PWD/dat/yolo/yolov3.onnx" --opset 12 --format yolov5 2>&1
+{"time":"2026-10-13T21:10:15.5577993+05:30","level":"INFO","msg":"parsing cfg","path":"C:/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking/dat/yolo/yolov3.cfg"}
+{"time":"2026-10-13T21:10:15.5599385+05:30","level":"INFO","msg":"cfg parsed","sections":108,"width":608,"height":608,"channels":3}
+{"time":"2026-10-13T21:10:15.560483+05:30","level":"INFO","msg":"reading weights","path":"C:/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking/dat/yolo/yolov3.weights"}
+{"time":"2026-10-13T21:10:15.8955411+05:30","level":"INFO","msg":"weights loaded","conv_layers":75}
+{"time":"2026-10-13T21:10:15.8955411+05:30","level":"INFO","msg":"converting to ONNX","opset":12,"format":"yolov5"}
+{"time":"2026-10-13T21:10:16.4570846+05:30","level":"INFO","msg":"done","output":"C:/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking/dat/yolo/yolov3.onnx","format":"yolov5","input_shape":"[1, 3, 608, 608]","output_shape":"[1 -1 85]","layers":107,"file_size_mb":236.61187362670898}
+(venv)
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ ls -lh dat/yolo/yolov3.cfg dat/yolo/yolov3.weights dat/yolo/yolov3.onnx
+-rw-r--r-- 1 SANIKA None 8.2K Oct  1 09:46 dat/yolo/yolov3.cfg
+-rw-r--r-- 1 SANIKA None 237M Oct 13 21:10 dat/yolo/yolov3.onnx
+-rw-r--r-- 1 SANIKA None 237M Oct  1 13:11 dat/yolo/yolov3.weights
+(venv)
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking/.venv-yolo/Scripts/python.exe -c "import cv2; print('OpenCV:', cv2.__version__); net=cv2.dnn.readNetFromONNX(r'C:\Users\SANIKA\Desktop\ARAI\Udacity-Sensor-Fusion-Nanodegree-main\Camera\Lesson-7-Project-3D-Object-Tracking\dat\yolo\yolov3.onnx'); print('ONNX model loaded successfully')"
+OpenCV: 5.0.0
+ONNX model loaded successfully
+(venv)
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking/.venv-yolo/Scripts/python.exe - <<'PY'
+import cv2
+import numpy as np
+
+image_path = r"C:\Users\SANIKA\Desktop\ARAI\Udacity-Sensor-Fusion-Nanodegree-main\Camera\Lesson-7-Project-3D-Object-Tracking\images\KITTI\2011_09_26\image_02\data\0000000000.png"
+model_path = r"C:\Users\SANIKA\Desktop\ARAI\Udacity-Sensor-Fusion-Nanodegree-main\Camera\Lesson-7-Project-3D-Object-Tracking\dat\yolo\yolov3.onnx"
+
+print("Loading image...")
+image = cv2.imread(image_path)
+if image is None:
+    raise RuntimeError("Could not read the KITTI image")
+
+print("Image shape:", image.shape)
+print("Loading ONNX model...")
+net = cv2.dnn.readNetFromONNX(model_path)
+
+print("Running inference...")
+blob = cv2.dnn.blobFromImage(
+    image, 1 / 255.0, (608, 608),
+    swapRB=False, crop=False
+)
+net.setInput(blob)
+output = net.forward()
+
+predictions = np.asarray(output).reshape(-1, 85)
+objectness = predictions[:, 4]
+
+print("Output shape:", np.asarray(output).shape)
+print("Prediction rows:", len(predictions))
+print("Objectness range:", float(objectness.min()), "to", float(objectness.max()))
+print("Rows with objectness > 0.2:", int(np.sum(objectness > 0.2)))
+print("Inference test completed.")
+PY
+
+OUTPUT:
+Loading image...
+Image shape: (375, 1242, 3)
+Loading ONNX model...
+Running inference...
+Output shape: (1, 22743, 85)
+Prediction rows: 22743
+Objectness range: 1.572281367601125e-12 to 0.9998587369918823
+Rows with objectness > 0.2: 35
+Inference test completed.
+(venv)
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking/.venv-yolo/Scripts/python.exe - <<'PY'
+import cv2
+import numpy as np
+
+model = r"C:\Users\SANIKA\Desktop\ARAI\Udacity-Sensor-Fusion-Nanodegree-main\Camera\Lesson-7-Project-3D-Object-Tracking\dat\yolo\yolov3.onnx"
+image_path = r"C:\Users\SANIKA\Desktop\ARAI\Udacity-Sensor-Fusion-Nanodegree-main\Camera\Lesson-7-Project-3D-Object-Tracking\images\KITTI\2011_09_26\image_02\data\0000000000.png"
+
+image = cv2.imread(image_path)
+net = cv2.dnn.readNetFromONNX(model)
+
+blob = cv2.dnn.blobFromImage(
+    image, 1 / 255.0, (608, 608),
+    swapRB=False, crop=False
+)
+net.setInput(blob)
+pred = net.forward().reshape(-1, 85)
+
+class_scores = pred[:, 5:]
+best_class = np.argmax(class_scores, axis=1)
+best_score = class_scores[np.arange(len(pred)), best_class]
+objectness = pred[:, 4]
+
+print("Box coordinates (first 4 columns):")
+print("Min:", pred[:, :4].min(axis=0))
+print("Max:", pred[:, :4].max(axis=0))
+print("Objectness max:", objectness.max())
+print("Class score max:", best_score.max())
+print("Rows with class score > 0.2:", np.sum(best_score > 0.2))
+print("\nTop 10 predictions (x, y, w, h, objectness, class score, class ID):")
+
+top = np.argsort(best_score)[-10:][::-1]
+for i in top:
+    print(
+        np.round(pred[i, :4], 3),
+        round(float(objectness[i]), 4),
+        round(float(best_score[i]), 4),
+        int(best_class[i])
+    )
+PY
+
+OUTPUT:
+Box coordinates (first 4 columns):
+Min: [0.69881415 0.960276   0.8103361  0.9122337 ]
+Max: [607.44775 607.4812  482.627   666.697  ]
+Objectness max: 0.99985874
+Class score max: 0.99976045
+Rows with class score > 0.2: 18563
+
+Top 10 predictions (x, y, w, h, objectness, class score, class ID):
+[299.229 353.702  16.245  29.359] 0.0068 0.9998 0
+[309.315 408.206  69.05   57.643] 0.0 0.9997 2
+[299.165 348.309  16.498  31.958] 0.0238 0.9997 0
+[294.44  353.627  14.777  28.434] 0.0047 0.9995 0
+[306.629 361.418  12.998  34.906] 0.0009 0.9995 0
+[300.924 406.927  65.624  61.474] 0.0 0.9995 2
+[306.55  354.332  12.206  31.246] 0.0499 0.9994 0
+[306.934 347.302  12.443  35.795] 0.1057 0.9994 0
+[300.049 361.919  16.131  30.985] 0.0002 0.9994 0
+[123.333 363.575  15.317  46.788] 0.0003 0.9994 0
+(venv)
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking/.venv-yolo/Scripts/python.exe - <<'PY'
+import cv2
+import numpy as np
+
+model = r"C:\Users\SANIKA\Desktop\ARAI\Udacity-Sensor-Fusion-Nanodegree-main\Camera\Lesson-7-Project-3D-Object-Tracking\dat\yolo\yolov3.onnx"
+image_path = r"C:\Users\SANIKA\Desktop\ARAI\Udacity-Sensor-Fusion-Nanodegree-main\Camera\Lesson-7-Project-3D-Object-Tracking\images\KITTI\2011_09_26\image_02\data\0000000000.png"
+
+image = cv2.imread(image_path)
+net = cv2.dnn.readNetFromONNX(model)
+blob = cv2.dnn.blobFromImage(image, 1 / 255.0, (608, 608), swapRB=False, crop=False)
+net.setInput(blob)
+pred = net.forward().reshape(-1, 85)
+
+objectness = pred[:, 4]
+class_scores = pred[:, 5:]
+class_ids = np.argmax(class_scores, axis=1)
+best_class_score = class_scores[np.arange(len(pred)), class_ids]
+combined_confidence = objectness * best_class_score
+
+print("Candidates with class score > 0.2:", int(np.sum(best_class_score > 0.2)))
+print("Candidates with combined confidence > 0.2:", int(np.sum(combined_confidence > 0.2)))
+
+vehicle_ids = [2, 3, 5, 7]  # car, motorcycle, bus, truck
+for class_id, name in [(2, "car"), (3, "motorcycle"), (5, "bus"), (7, "truck")]:
+    mask = (class_ids == class_id) & (combined_confidence > 0.2)
+    print(f"{name}: {int(np.sum(mask))} candidates")
+
+print("\nTop 10 predictions by combined confidence:")
+for i in np.argsort(combined_confidence)[-10:][::-1]:
+    print(
+        f"class={class_ids[i]}, objectness={objectness[i]:.4f}, "
+        f"class_score={best_class_score[i]:.4f}, "
+        f"combined={combined_confidence[i]:.4f}"
+    )
+PY
+
+OUTPUT:
+Candidates with class score > 0.2: 18563
+Candidates with combined confidence > 0.2: 33
+car: 18 candidates
+motorcycle: 0 candidates
+bus: 7 candidates
+truck: 6 candidates
+
+Top 10 predictions by combined confidence:
+class=2, objectness=0.9998, class_score=0.9916, combined=0.9914
+class=2, objectness=0.9999, class_score=0.9815, combined=0.9814
+class=2, objectness=0.9777, class_score=0.9947, combined=0.9726
+class=2, objectness=0.9844, class_score=0.9718, combined=0.9566
+class=2, objectness=0.9699, class_score=0.9767, combined=0.9473
+class=2, objectness=0.9111, class_score=0.9696, combined=0.8834
+class=2, objectness=0.8665, class_score=0.9847, combined=0.8532
+class=2, objectness=0.8625, class_score=0.9673, combined=0.8342
+class=2, objectness=0.8154, class_score=0.9931, combined=0.8097
+class=2, objectness=0.9018, class_score=0.8968, combined=0.8087
+(venv)
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ cp src/objectDetection2D.cpp src/objectDetection2D.cpp.bak
+(venv)
+
+Update objectDetection2D Code:
+#include <fstream>
+#include <sstream>
+#include <iostream>
+
+#include <opencv2/dnn.hpp>
+#include <opencv2/imgproc.hpp>
+#include <opencv2/highgui.hpp>
+
+#include "objectDetection2D.hpp"
+
+using namespace std;
+
+// detects objects in an image using the YOLO library and a set of pre-trained objects from the COCO database;
+// a set of 80 classes is listed in "coco.names" and pre-trained weights are stored in "yolov3.weights"
+
+void detectObjects(cv::Mat& img,
+                   std::vector<BoundingBox>& bBoxes,
+                   float confThreshold,
+                   float nmsThreshold,
+                   std::string basePath,
+                   std::string classesFile,
+                   std::string modelConfiguration,
+                   std::string modelWeights,
+                   bool bVis)
+{
+    // Load COCO class names
+    std::vector<std::string> classes;
+    std::ifstream ifs(classesFile);
+    std::string line;
+
+    while (std::getline(ifs, line))
+        classes.push_back(line);
+
+    if (!ifs.eof() && ifs.fail())
+        throw std::runtime_error("Failed to read COCO class names");
+
+    // modelConfiguration now points to the ONNX model.
+    // modelWeights is retained to preserve the existing function signature.
+    (void)basePath;
+    (void)modelWeights;
+
+    cv::dnn::Net net = cv::dnn::readNetFromONNX(modelConfiguration);
+    net.setPreferableBackend(cv::dnn::DNN_BACKEND_OPENCV);
+    net.setPreferableTarget(cv::dnn::DNN_TARGET_CPU);
+
+    // The converted YOLOv3 model expects a 608 x 608 input.
+    constexpr int inputSize = 608;
+
+    cv::Mat blob;
+    cv::dnn::blobFromImage(
+        img, blob, 1.0 / 255.0,
+        cv::Size(inputSize, inputSize),
+        cv::Scalar(0, 0, 0),
+        false, false
+    );
+
+    net.setInput(blob);
+    cv::Mat output = net.forward();
+
+    // Expected output: [1, 22743, 85]
+    // Each row: cx, cy, width, height, objectness, 80 class scores.
+    if (output.dims != 3 || output.size[2] != 85)
+        throw std::runtime_error("Unexpected YOLOv3 ONNX output shape");
+
+    const int numPredictions = output.size[1];
+    const int numValues = output.size[2];
+
+    cv::Mat predictions(
+        numPredictions,
+        numValues,
+        CV_32F,
+        output.ptr<float>()
+    );
+
+    std::vector<int> classIds;
+    std::vector<float> confidences;
+    std::vector<cv::Rect> boxes;
+
+    const cv::Rect imageBounds(0, 0, img.cols, img.rows);
+
+    for (int i = 0; i < numPredictions; ++i)
+    {
+        const float* data = predictions.ptr<float>(i);
+
+        const float objectness = data[4];
+
+        if (objectness <= 0.0f)
+            continue;
+
+        // Find the class with the highest class probability.
+        int classId = 0;
+        float classScore = data[5];
+
+        for (int c = 1; c < 80; ++c)
+        {
+            if (data[5 + c] > classScore)
+            {
+                classScore = data[5 + c];
+                classId = c;
+            }
+        }
+
+        // Standard YOLO confidence = objectness * class probability.
+        const float confidence = objectness * classScore;
+
+        if (confidence < confThreshold)
+            continue;
+
+        // Output coordinates are in 608 x 608 model-input space.
+        // Map them back to the original image dimensions.
+        const float scaleX = static_cast<float>(img.cols) / inputSize;
+        const float scaleY = static_cast<float>(img.rows) / inputSize;
+
+        const float cx = data[0] * scaleX;
+        const float cy = data[1] * scaleY;
+        const float width = data[2] * scaleX;
+        const float height = data[3] * scaleY;
+
+        const int left = static_cast<int>(cx - width / 2.0f);
+        const int top = static_cast<int>(cy - height / 2.0f);
+        const int boxWidth = static_cast<int>(width);
+        const int boxHeight = static_cast<int>(height);
+
+        cv::Rect box(left, top, boxWidth, boxHeight);
+        box &= imageBounds;
+
+        if (box.width <= 0 || box.height <= 0)
+            continue;
+
+        boxes.push_back(box);
+        classIds.push_back(classId);
+        confidences.push_back(confidence);
+    }
+
+    // Preserve the original pipeline's NMS behavior.
+    std::vector<int> indices;
+    cv::dnn::NMSBoxes(
+        boxes, confidences,
+        confThreshold, nmsThreshold, indices
+    );
+
+    for (int index : indices)
+    {
+        BoundingBox bBox;
+        bBox.roi = boxes[index];
+        bBox.classID = classIds[index];
+        bBox.confidence = confidences[index];
+        bBox.boxID = static_cast<int>(bBoxes.size());
+
+        bBoxes.push_back(bBox);
+    }
+
+    // Optional visualization
+    if (bVis)
+    {
+        cv::Mat visImg = img.clone();
+
+        for (const auto& box : bBoxes)
+        {
+            cv::rectangle(
+                visImg, box.roi,
+                cv::Scalar(0, 255, 0), 2
+            );
+
+            std::string label;
+            if (box.classID >= 0 &&
+                box.classID < static_cast<int>(classes.size()))
+            {
+                label = classes[box.classID];
+            }
+            else
+            {
+                label = "unknown";
+            }
+
+            label += ":" + cv::format("%.2f", box.confidence);
+
+            cv::putText(
+                visImg, label,
+                cv::Point(box.roi.x, std::max(15, box.roi.y - 5)),
+                cv::FONT_HERSHEY_SIMPLEX, 0.5,
+                cv::Scalar(0, 255, 0), 1
+            );
+        }
+
+        cv::imshow("Object classification", visImg);
+        cv::waitKey(0);
+    }
+}
+
+Update Stage01_YOLO.cpp:
+// YOLO files
+    string yoloBasePath = dataPath + "dat/yolo/";
+    string yoloClassesFile =
+        yoloBasePath + "coco.names";
+    string yoloModelConfiguration =
+        yoloBasePath + "yolov3.onnx";
+    string yoloModelWeights = "";
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ cmake --build build --target Stage01_YOLO --parallel 2
+[ 33%] Building CXX object CMakeFiles/Stage01_YOLO.dir/stage_code/01_yolo_all_vehicles/Stage01_YOLO.cpp.obj
+[ 66%] Building CXX object CMakeFiles/Stage01_YOLO.dir/src/objectDetection2D.cpp.obj
+[100%] Linking CXX executable Stage01_YOLO.exe
+[100%] Built target Stage01_YOLO
+(venv)
+
+INSTALL QT6 RUNTIME:
+pacman -Ss mingw-w64-ucrt-x86_64-qt6-base
+pacman -S mingw-w64-ucrt-x86_64-qt6-base
+ls -l /ucrt64/bin/Qt6Core.dll
+ls -l /ucrt64/bin/Qt6OpenGLWidgets.dll
+ls -l /ucrt64/bin/Qt6Test.dll
+ldd /ucrt64/bin/libopencv_highgui-500.dll | grep -i "not found"
+
+cd /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+ls -l images/KITTI/2011_09_26/image_02/data/0000000000.png
+./build/Stage01_YOLO.exe echo "EXIT_CODE=$?"
+ls -lt results/stages/01_yolo_all_vehicles/frames/ | head
+find results/stages/01_yolo_all_vehicles/frames -maxdepth 1 -name 'frame_*.png' | wc -l
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ python tools/make_gif.py results/stages/01_yolo_all_vehicles/frames results/stages/01_yolo_all_vehicles/stage01_yolo_all_vehicles.gif 10
+OUTPUT:
+Created GIF: results/stages/01_yolo_all_vehicles/stage01_yolo_all_vehicles.gif
+Frames: 78
+FPS: 10
+______________________________________________________________________________________________________________________________________________________________________________________
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ cmake --build build --target Stage02_LiDAR --parallel 2
+[ 33%] Building CXX object CMakeFiles/Stage02_LiDAR.dir/stage_code/02_lidar_detection/Stage02_LiDAR.cpp.obj
+[ 66%] Linking CXX executable Stage02_LiDAR.exe
+[100%] Built target Stage02_LiDAR
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ ./build/Stage02_LiDAR.exe 2>&1 | tee stage02_run.log
+
+SANIKA@Sanika-Inspiron14Plus UCRT64 /c/Users/SANIKA/Desktop/ARAI/Udacity-Sensor-Fusion-Nanodegree-main/Camera/Lesson-7-Project-3D-Object-Tracking
+$ python tools/make_gif.py results/stages/02_lidar_detection/frames results/stages/02_lidar_detection/02_lidar_detection.gif 10
+Created GIF: results/stages/02_lidar_detection/02_lidar_detection.gif
+Frames: 78
+FPS: 10
+______________________________________________________________________________________________________________________________________________________________________________________
+
+Same for stage 3, 4, 5:
+Update this:
+// Program is executed from the project root
+string dataPath = "";
+
+string imgBasePath = dataPath + "images/";
+
+string outputPath =
+    "results/stages/03_lidar_projection/frames/";
+
+    // ============================================================
+    // YOLO
+    // ============================================================
+
+    string yoloBasePath =
+        dataPath + "dat/yolo/";
+
+    string yoloClassesFile =
+        yoloBasePath + "coco.names";
+
+    string yoloModelConfiguration =
+        yoloBasePath + "yolov3.onnx";
+
+    string yoloModelWeights = "";
+
+$ cmake --build build --target Stage02_LiDAR --parallel 2
+
+set -o pipefail
+./build/Stage04_SensorFusion.exe 2>&1 | tee stage04_run.log
+status=${PIPESTATUS[0]}
+echo "EXIT_CODE=$status"
+
+find results/stages/04_sensor_fusion/frames -maxdepth 1 -type f | sort | wc -l
+
+python tools/make_gif.py results/stages/02_lidar_detection/frames results/stages/02_lidar_detection/02_lidar_detection.gif 10
+>>>>>>> beb124a (Update camera LiDAR sensor fusion stages and setup guides)
